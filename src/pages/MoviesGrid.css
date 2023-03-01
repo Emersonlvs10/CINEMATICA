@@ -8,7 +8,27 @@
   .title .query-text {
     color: #eebbc3;
   }
-  
+  .container #verMais{
+display: flex;
+justify-content: center;
+align-items: center;
+margin-bottom :2rem;
+
+  }
+  .container #verMais button{
+    background-color: #eebbc3;
+    border: 2px solid #eebbc3;
+    border-radius: 4px;
+    color: #000;
+    padding: 1rem 1rem;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  .container #verMais button:hover{
+    background-color: #b8c1ec;
+    border: 2px solid #000;
+  }
   .movies-container {
     display: flex;
     flex-wrap: wrap;
@@ -19,9 +39,6 @@
     
   }
 
-  .movies-container div img{
-  
-  }
   
   .movies-container div {
     width:200px;
