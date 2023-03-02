@@ -41,7 +41,12 @@ margin-bottom :2rem ;
     
   }
 
-  
+  @media (max-width:500px){
+    .movies-container{
+      justify-content: center;
+    }
+  }
+
   .movies-container div {
     width:200px;
     color: #fff;
