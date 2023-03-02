@@ -1,3 +1,6 @@
+.content{
+  margin: 1rem;
+}
 .movie-page {
     color: #fff;
     display: grid;
