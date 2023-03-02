@@ -20,11 +20,11 @@ const Home = () => {
 
 
   useEffect(() => {
-    if (page ==0){
+    if (page == 0){
       setPage(1)
     }
     
-    const topRateUrl = `${moviesURl}top_rated?${apiKey}&page=${page}`;
+    const topRateUrl = `${moviesURl}top_rated?${apiKey}&page=${page ||1}`;
     getTopMovies(topRateUrl);
   }, [page]);
   return (
@@ -33,6 +33,7 @@ const Home = () => {
       <div className="movies-container">
         {topMovies.length > 0 &&
           topMovies.map((movie) => <MovieCard key={movie.id} movie={movie} />)}
+      
       </div>
       <div id="verMais"> 
       <button onClick={()=>{ setPage(page-1)}} >Anterior</button>
