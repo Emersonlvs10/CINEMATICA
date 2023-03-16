@@ -14,10 +14,11 @@ const Home = () => {
   const getTopMovies = async (url) => {
     const res = await fetch(url);
     const data = await res.json();
-
-    setTopMovies(data.results);
+    
+    setTopMovies([...topMovies, ...data.results]);
+ 
   };
-
+  console.log(topMovies)
 
   useEffect(() => {
     if (page == 0){
@@ -36,9 +37,7 @@ const Home = () => {
       
       </div>
       <div id="verMais"> 
-      <button onClick={()=>{ setPage(page-1)}} >Anterior</button>
        <button onClick={()=>{ setPage(page+1)}} >Ver mais</button>
-     
       </div>
     </div>
   );
